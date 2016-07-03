@@ -13,6 +13,7 @@
     "http-shutdown": "^1.0.3",
     "httpdispatcher": "^1.0.0",
     "neo4j-driver": "^1.0.0",
-    "node-yaml-config": "0.0.4"
+    "node-yaml-config": "0.0.4",
+    "process": "^0.11.5"
   }
 }
