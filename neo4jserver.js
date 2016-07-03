@@ -6,7 +6,7 @@ var config = yaml_config.load(__dirname + '/config/config.yml');
 var express = require('express');
 var app = express();
 
-var driver = neo4j.driver("bolt://" + config.server.host, neo4j.auth.basic("neo4j", "test"));
+var driver = neo4j.driver("bolt://" + config.server.host, neo4j.auth.basic(config.server.username, config.server.password));
 
 app.get('/', function (req, res) {
 
