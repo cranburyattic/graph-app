@@ -1,6 +1,5 @@
 var neo4j = require('neo4j-driver').v1;
 var http = require('http');
-var dispatcher = require('httpdispatcher');
 var yaml_config = require('node-yaml-config');
 var config = yaml_config.load(__dirname + '/config/config.yml');
 var express = require('express');
