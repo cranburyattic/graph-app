@@ -8,8 +8,6 @@ var app = express();
 
 var driver = neo4j.driver("bolt://" + config.server.host, neo4j.auth.basic("neo4j", "test"));
 
-
-
 app.get('/', function (req, res) {
 
     var session = driver.session();
@@ -29,7 +27,6 @@ app.get('/', function (req, res) {
       .subscribe({
         onNext: function(record) {
           //record.forEach(function(value, key, record) {
-            //sword.push(key + ": " + value);
             console.log(record);
             var jsonObject = {};
             jsonObject.name1 = record.get("name1");
